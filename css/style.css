@@ -658,7 +658,9 @@ textarea.form-control {
         text-align: center;
     }
 }
-
+.reviews {
+    overflow: hidden;
+}
 .reviews .carousel-indicators {
     bottom: -90px;
 }
@@ -669,6 +671,48 @@ textarea.form-control {
 
 .reviews .carousel-indicators li.active {
     background-color: #111;
+}
+.reviews .carousel-control{
+    background:none;
+    opacity:0;
+    width:85px;
+    transition: all .3s linear;
+    transform:translateX(-10px);
+}
+.reviews .carousel-control.right{
+    transform:translateX(10px)
+}
+
+.reviews .carousel-control::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 85px;
+    width:85px;
+    background-color:#fff;
+    top: 50%;
+    left: -50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+.reviews .carousel-control.right::before{
+    left:auto;
+    right:-50%;
+}
+.reviews .carousel-control i.fa{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    color: #222;
+    left:20px;
+    right:auto;
+}
+.reviews .carousel-control.right i.fa{
+    left:auto;
+    right:20px;
+}
+.reviews:hover .carousel-control{
+    opacity:1;
+    transform:translateX(0);
 }
 
 .contact-item-icon, .contact-item-content {
