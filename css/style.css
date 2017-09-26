@@ -463,7 +463,23 @@ textarea.form-control {
         letter-spacing:1.5em;
     }
 }
+.inner .white-icon {
+    position: absolute;
+    top:90%;
+    left:49%;
+    transform:translateX(-50%) translateY(50%) rotate(-45deg);
+    font-size:15px;
+    color: #222;
+}
 
+.inner .rhomb-icon{
+    font-size:15px;
+    transform:rotate(45deg);
+}
+.inner .white-icon:hover{
+    background-color:#ccc;
+    cursor: pointer;
+}
 .our-team {
     margin-top: 100px;
 }
