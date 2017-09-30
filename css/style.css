@@ -46,7 +46,6 @@ textarea {
 .border-top {
     border-top: 1px solid #ececec;
 }
-
 /*DEFAULT CLASS END*/
 
 /*DEFAULT COMPONENT START*/
@@ -154,16 +153,16 @@ blockquote span {
     background-color: #737373;
 }
 
-.btn.btn-default.btn-xs {
+.btn.btn-xs {
     color: #777;
     font-size: 11px;
     background-color: #e5e5e5;
-    line-height: calc(26 / 11);
+    line-height: 2.3px;
     letter-spacing: .2em;
-    padding: 6px 15px;
+    padding: 10px 15px;
 }
 
-.btn.btn-default.btn-xs:hover {
+.btn .btn-xs:hover {
     background-color: #737373;
     color: #f8f8f8;
 }
@@ -240,7 +239,6 @@ textarea.form-control {
     color: #aaa;
     font-size: 12px;
     line-height: 2.16;
-    float: left;
     margin-right: 3px;
 }
 
@@ -347,9 +345,6 @@ textarea.form-control {
     }
 }
 
-.icon-w-title-wrap div{
-    margin-bottom: 30px;
-}
 
 
 .row-wrap + .row-wrap {
@@ -384,6 +379,13 @@ textarea.form-control {
 /*DEFAULT COMPONENT END*/
 
 /*CUSTOM STYLE START*/
+.icon-w-title-wrap div{
+    margin-bottom: 30px;
+}
+.icon-w-title-wrap p{
+    text-align: left;
+}
+
 .main {
     padding-top: 81px;
 }
@@ -391,7 +393,8 @@ textarea.form-control {
 .inner {
     background: rgba(19, 19, 19, 1.0);
     position: relative;
-    height: calc(100vh - 81px);
+    height: 100vh;
+    margin-top:-81px;
 }
 
 .inner-content {
@@ -469,15 +472,20 @@ textarea.form-control {
 }
 .inner .white-icon {
     position: absolute;
-    top:90%;
-    left:49%;
-    font-size:15px;
+    bottom:30px;
+    left:49.5%;
+    font-size:11px;
     color: #222;
+    padding-left:5px;
 }
 
 .inner .white-icon:hover{
     background-color:#ccc;
     cursor: pointer;
+}
+.inner .rhomb-icon{
+    width:20px;
+    height:20px;
 }
 .our-team {
     margin-top: 100px;
@@ -570,14 +578,12 @@ textarea.form-control {
     max-width: 292px;
     display: inline-block;
     margin-right: 4px;
-    padding-top: 13px;
-    padding-left: 13px;
-    padding-bottom: 13px;
+    padding:13px;
+    vertical-align: middle;
 }
 
 .small-section form button {
     display: inline-block;
-    margin-bottom: 1px;
 }
 
 .small-section .title {
@@ -588,13 +594,10 @@ textarea.form-control {
     margin-top: 20px;
 }
 
-.under-form-text .text-section {
+.under-form-text.text-section {
     font-size: 11px;
     color: #aaa;
     line-height: 2.36;
-    float: left;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .gray-bg {
@@ -754,8 +757,7 @@ textarea.form-control {
 .contact-item .contact-data {
     font-size: 15px;
     color: #444;
-    line-height: calc(24 / 15);
-    margin-top: 10.6px;
+    margin-top: 10px;
 }
 
 .contact-us form {
@@ -792,13 +794,10 @@ textarea.form-control {
     margin-top: 10px;
 }
 
-.form-submit .text-section {
+.form-submit span{
     font-size: 11px;
     color: #aaa;
     line-height: 2.36;
-    float: left;
-    display: inline-block;
-    vertical-align: middle;
 }
 
 .contact-us .btn-dark {
@@ -828,6 +827,11 @@ textarea.form-control {
     }
 }
 
+.news a{
+    font-size: 11px;
+    letter-spacing: .4em;
+    color: #999;
+}
 .news-main-title {
     display: block;
 }
@@ -835,15 +839,6 @@ textarea.form-control {
 .all-news-icon {
     font-size: 10px;
     letter-spacing: .4em;
-}
-
-.news .news-link-wrap {
-    float: right;
-    display: inline-block;
-    margin-top: -10px;
-    font-size: 11px;
-    letter-spacing: .4em;
-    color: #999;
 }
 @media (max-width: 559px) {
     .news .news-link-wrap{
@@ -856,7 +851,6 @@ textarea.form-control {
 }
 
 .news .news-img {
-    margin-top: 80px;
     margin-bottom: 30px;
 }
 
@@ -889,8 +883,9 @@ textarea.form-control {
 
 .btn-xs .fa.fa-chevron-right {
     margin-left: 5px;
+    font-size:9px;
+;
 }
-
 .footer.gray-bg {
     padding-top: 140px;
     padding-bottom: 60px;
@@ -984,6 +979,9 @@ textarea.form-control {
     }
 }
 
+.portfolio-tabs .nav-tabs{
+    margin-bottom:50px;
+}
 .portfolio-tabs .nav-tabs li {
     opacity: .5;
     float: none;
@@ -992,7 +990,6 @@ textarea.form-control {
     font-size: 13px;
     font-family: "Dosis", sans-serif;
     margin-top: 35px;
-    margin-bottom: 50px;
     text-transform: uppercase;
     font-weight: 400;
 
@@ -1014,6 +1011,9 @@ textarea.form-control {
 
 .portfolio .tab-content {
     overflow: hidden;
+}
+.portfolio .tab-content img{
+    width:100%;
 }
 
 .portfolio .tab-pane {
@@ -1068,27 +1068,31 @@ textarea.form-control {
     background-color: rgba(0, 0, 0, .9);
     transition: all 0.5s linear;
 }
-
+.on-map-title{
+    font-family: 'Dosis', sans-serif;
+    font-weight:400;
+    opacity: .75;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-size: 16px;
+}
 .on-map-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    color: #fff;
 }
 
 .map .on-map-text .rhomb-icon {
     margin-bottom: 28px;
 }
 
-.on-map-text .text-white {
+.on-map-text .on-map-title i {
     opacity: .75;
-    text-transform: uppercase;
-    letter-spacing: .3em;
-    font-size: 16px;
-}
-
-.on-map-text .title i {
-    opacity: .75;
+    margin-left:10px;
+    line-height:17px;
+    font-size:12px;
 }
 
 .map:hover .on-map-block {
